@@ -1,0 +1,4 @@
+project: PROJECT
+target: assimp_fuzzer
+cmds:
+- cmd: /out/assimp_fuzzer

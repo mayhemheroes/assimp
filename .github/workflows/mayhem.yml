@@ -38,7 +38,7 @@ jobs:
       contents: read
       packages: write          # push the commit image to ghcr.io/<org>/<repo>
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0  # full mayhem-branch history in the image (NOT shallow); see SPEC §6.2 item 2
           submodules: recursive
@@ -100,7 +100,7 @@ jobs:
           - mayhem/Mayhemfile_assimp_fuzzer_ifc
           - mayhem/Mayhemfile_assimp_roundtrip_fuzzer
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.build.outputs.ref }}
       - name: Start analysis for ${{ matrix.mayhemfile }}
